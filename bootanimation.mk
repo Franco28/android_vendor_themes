@@ -26,6 +26,10 @@ ifneq ($(filter dragon,$(du_device)),)
 scr_resolution := 1800x2560
 endif
 
+ifneq ($(filter wayne,$(du_device)),)
+scr_resolution := 1080x2160
+endif
+
 ifneq ($(wildcard vendor/themes/bootanimation/$(scr_resolution).zip),)
 PRODUCT_COPY_FILES += \
     vendor/themes/bootanimation/$(scr_resolution).zip:system/media/bootanimation.zip
